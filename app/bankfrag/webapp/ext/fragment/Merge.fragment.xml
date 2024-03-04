@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
+	<VBox>
+		<Button core:require="{ handler: 'bankfrag/ext/fragment/Merge'}" text="Merge" press="handler.onPress" />
+		<Table
+		headerText="account"
+		items="{
+			path:'/acc',
+			parameters : {
+				$orderby : 'acc_no'
+			}
+		}" >
+		<columns>
+			<Column mergeDuplicates="true">
+				<header>
+					<Text text="acc_type" />
+				</header>
+			</Column>
+			<Column mergeDuplicates="true">
+				<header>
+					<Text text="acc_no" />
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="acc_bal" />
+				</header>
+			</Column>
+			
+		</columns>
+		<ColumnListItem vAlign="Middle">
+			<Text text="{acc_type}" />
+			<Text text="{acc_no}" />
+			<Text text="{acc_bal}" />
+			
+
+		</ColumnListItem>
+	</Table>
+	</VBox>
+</core:FragmentDefinition>
