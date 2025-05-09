@@ -6,12 +6,12 @@
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
-        "@sap/cds": "^7",
         "@sap/cds-hana": "^2",
         "express": "^4"
     },
     "devDependencies": {
         "@cap-js/sqlite": "^1",
+        "@sap/cds": "^8.9.3",
         "@sap/cds-dk": "^7",
         "@sap/ux-specification": "^1.120.4",
         "rimraf": "^3.0.2"
